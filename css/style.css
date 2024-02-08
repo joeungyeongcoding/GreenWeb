@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;  /* ul li때문에*/
+    color: #333333;
+    box-sizing: border-box;
+}
+body {
+    background: #ffffff;
+}
+a {
+    display: block;
+    text-decoration: none;  /*link 파랑때문에*/
+}
+
+/************* layout **************/
+
+.container {
+    width: 1200px;
+    height: 700px;
+}
+header {
+    width: 1200px;
+    height: 100px;
+}
+.slide {
+    width: 1200px;
+    height: 300px;
+}
+.content {
+    width: 1200px;
+    height: 200px;
+}
+.notice,.gallery,.banner {
+    width: 400px;
+    height: 200px;
+}
+footer {
+    width: 1200px;
+    height: 100px;
+}
+
+/************* header **************/
+header {
+    background-color: #3cb149;
+}
+.logo {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.logo a {
+    margin-top: 30px;
+}
+.menu {
+    float: right;
+    margin-top: 48px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 50px;
+}
+.gnb>li {
+    float: left;
+}
+.gnb>li>a {
+    width: 120px;
+    height: 50px;
+    background: #3cb149;
+    color: #ffffff;
+    transition: all 300ms;
+}
+.gnb>li>a:hover {
+    background: #96d2ab;
+}
+.lnb {
+    position: absolute;
+    background: #3c8556;
+    display: none;
+    z-index: 2;
+}
+.lnb>li>a {
+    width: 120px;
+    height: 50px;
+    color: #ffffff;
+}
+
+/************* slide **************/
+
+.slide {
+    position: relative; /*둘중 하나라도 없으면 slide-box가 밖으로 나감*/
+    overflow: hidden;/*둘중 하나라도 없으면 slide-box가 밖으로 나감*/
+}
+.slide-box {
+    width: 3600px;
+    height: 300px; 
+    position: absolute; /*없으면 슬라이드효과없이 이미지만 바뀜*/
+                        /*CSS내에서 이미지위치 변경시 position: absolute있으면 left로 변경. 없으면 margin-left로 변경해야함*/
+}
+.slide-box img{
+    float: left;
+}
+
+/************* content **************/
+
+.notice,.gallery,.banner {
+    float: left;
+}
+.notice {
+    background: #3cb149;
+}
+.notice h3 {
+    border: 1px solid #333333;
+    border-bottom: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 100px;
+    text-align: center;
+    background: #96d2ab;
+}
+.notice ul {
+    border: 1px solid #333333;
+    margin: 10px;
+    margin-top: 0;
+    padding: 0px 4px;
+    padding-top: 15px;
+    font-size: 12px;
+    height: 150px;
+    background: #96d2ab;
+
+}
+.notice span{
+    float: right;
+    font-weight: bold;
+}
+.gallery {
+    background: #3cb149;
+}
+.gallery h3 {
+    border: 1px solid #333333;
+    border-bottom: none;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    background: #96d2ab;
+}
+.gallery ul {
+    border: 1px solid #333333;
+    height: 150px;
+    margin: 10px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #96d2ab;
+}
+.gallery li {
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/************* footer **************/
+footer {
+    background-color: #333333;
+}
+.logo-f {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.logo-f img {
+    margin-top: 30px;
+}
+.copy ul {
+    float: left;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.copy li {
+    font-size: 13px;
+    color: #fff;
+}
+.familySite {
+    width: 200px;
+    height: 100px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.familySite h3 {
+    font-size: 13px;
+    color: #fff;
+
+}
+.familySite ul {
+    display: flex;
+    flex-direction: row;
+}
+.familySite a {
+    font-size: 13px;
+    color: #fff;
+    margin: 10px;
+}
+
+/************* modal **************/
+
+.modal {
+    width:100%;
+    height:100%;
+    position: fixed;
+    background:rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.modal-box {
+    border: 1px solid #333333;
+    background-color: #fff;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 150px;
+    left: 300px;
+    text-align: center;
+}
+.modal-box p {
+    padding: 30px;
+}
+
+.modal button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
